@@ -1,14 +1,14 @@
 <template>
   <div>
-    <label>
+    <!-- <label>
       Items per page:
       <input
         type="number"
         v-model="quantity"
         v-on:change="updateProductsList"
       />
-    </label>
-    <div class="d-flex fl">
+    </label> -->
+    <div class="d-flex fl content">
       <CatalogCard
         v-for="product in products"
         v-bind:key="product.id"

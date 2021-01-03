@@ -23,8 +23,8 @@
       id="navbarSupportedContent"
     >
       <div class="drpdwn justify-content-between">
-        <router-link to="/"><a class="nav-link active">MAIN</a></router-link>
-        <a class="nav-link">CATALOG</a>
+        <a class="nav-link">MAIN</a>
+        <router-link to="/"><a class="active nav-link">CATALOG</a></router-link>
         <a class="nav-link">CONTACTS</a>
         <a class="nav-link">TESTIMONIALS</a>
       </div>

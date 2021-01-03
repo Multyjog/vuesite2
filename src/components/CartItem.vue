@@ -67,7 +67,7 @@ export default {
   methods: {
     deleteOrder() {
       this.$emit("deleted");
-      // this.$store.commit("deleteOrder", this.order);
+      this.$store.commit("deleteOrder", this.order);
     },
     setQuantity() {
       this.$store.commit("setQuantity", {

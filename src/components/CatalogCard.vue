@@ -87,6 +87,14 @@
     >
       ADD TO CART
     </button>
+    <button
+      @click="warning"
+      v-else
+      type="button"
+      class="btn btn-warning btn-sm card-body m-5 add-to-cart-trigger"
+    >
+      ADDED TO CART
+    </button>
 
     <!-- Modal -->
     <div
@@ -166,6 +174,35 @@ export default {
   methods: {
     addOrder() {
       this.$store.commit("addOrder", this.product);
+      this.$toasted.show("We add " + this.product.name + " in your cart", {
+        position: "bottom-right",
+        duration: 2500,
+        action: {
+          text: "X",
+          onClick: (event, toastObject) => {
+            toastObject.goAway(0);
+          }
+        },
+        theme: "bubble",
+        type: "success"
+      });
+    },
+    warning() {
+      this.$toasted.show(
+        "We already add " + this.product.name + " in your cart",
+        {
+          position: "bottom-right",
+          duration: 2500,
+          action: {
+            text: "X",
+            onClick: (event, toastObject) => {
+              toastObject.goAway(0);
+            }
+          },
+          theme: "bubble",
+          type: "info"
+        }
+      );
     }
   }
 };
