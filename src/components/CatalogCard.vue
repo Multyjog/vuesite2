@@ -6,65 +6,15 @@
       </p>
     </div>
     <div class="container cursor">
-      <div
-        id="firstcarouselindicators"
-        class="carousel slide"
-        data-ride="carousel"
+      <carousel
+        :per-page="1"
+        pagination-color="white"
+        pagination-active-color="yellow"
       >
-        <ol class="carousel-indicators">
-          <li
-            data-target="#firstcarouselindicators"
-            data-slide-to="0"
-            class="active"
-          ></li>
-          <li data-target="#firstcarouselindicators" data-slide-to="1"></li>
-          <li data-target="#firstcarouselindicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="d-block w-100"
-              src="img/catalog_img.jpg"
-              data-toggle="modal"
-              data-target="#firstmodalCenter"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="img/catalog_img2.jpg"
-              data-toggle="modal"
-              data-target="#firstmodalCenter"
-            />
-          </div>
-          <div class="carousel-item">
-            <img
-              class="d-block w-100"
-              src="img/catalog_img3.jpg"
-              data-toggle="modal"
-              data-target="#firstmodalCenter"
-            />
-          </div>
-        </div>
-        <a
-          class="carousel-control-prev"
-          href="#firstcarouselindicators"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#firstcarouselindicators"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
+        <slide v-for="image in product.images" :key="image.url">
+          <img :src="image.url" :alt="image.title" width="100%" height="100%" />
+        </slide>
+      </carousel>
     </div>
     <p class="mt-3 px-4">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -127,14 +77,7 @@
               </div>
               <div class="col-sm-8">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  {{ product.description }}
                 </p>
                 <h4>Weight: 100g</h4>
                 <h4>
@@ -159,7 +102,9 @@
 </template>
 
 <script>
+import { Carousel, Slide } from "vue-carousel";
 import { renderSum } from "@/utils.js";
+
 export default {
   name: "CatalogCard",
   props: { product: Object },
@@ -170,6 +115,10 @@ export default {
     price() {
       return renderSum(this.product.net_price);
     }
+  },
+  components: {
+    Carousel,
+    Slide
   },
   methods: {
     addOrder() {
