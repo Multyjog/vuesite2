@@ -1,9 +1,9 @@
 <template>
   <router-link to="/cart">
-    <a class="nav-link" href="cart.html">
+    <span>
       <i class="nav-link fas fa-shopping-cart"></i>
       <span id="total">{{ totalSum }}</span>
-    </a>
+    </span>
   </router-link>
 </template>
 

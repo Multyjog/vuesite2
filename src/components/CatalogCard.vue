@@ -5,7 +5,7 @@
         class="card-title"
         data-toggle="modal"
         data-target="#firstmodalCenter"
-        @click="$emit('title-click')"
+        @click="showModal"
       >
         {{ product.name }}
       </p>
@@ -44,6 +44,48 @@
     >
       ADDED TO CART
     </button>
+    <modal :name="product.name" :height="400" :adaptive="true">
+      <div class="popupheader justify-content-center">
+        <h5 class="modal-title" id="firstmodalLongTitle">
+          {{ product.name }}
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="w-100" :src="product.image" />
+          </div>
+          <div class="col-sm-8">
+            <p>
+              {{ product.description }}
+            </p>
+            <h4>Weight: 100g</h4>
+            <h4>
+              PRICE:
+              <span class="modal-price">{{ product.net_price }}</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="popupfooter">
+        <button
+          type="button"
+          v-if="!isInCart"
+          class="modal-button btn btn-warning btn-sm card-body m-5"
+          @click="addOrder"
+        >
+          ADD TO CART
+        </button>
+        <button
+          @click="warning"
+          v-else
+          type="button"
+          class="btn btn-warning btn-sm card-body m-5 add-to-cart-trigger"
+        >
+          ADDED TO CART
+        </button>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -98,7 +140,16 @@ export default {
           type: "info"
         }
       );
+    },
+    showModal() {
+      console.log("asdasd");
+      this.$modal.show(this.product.name);
     }
   }
 };
 </script>
+<style>
+.vm--modal {
+  color: black;
+}
+</style>

@@ -1,7 +1,13 @@
 <template>
-  <div class="cart">
-    <CartItem v-for="order in orders" :order="order" :key="order.ean" />
-  </div>
+  <content>
+    <div v-if="orders.length" class="cart">
+      <CartItem v-for="order in orders" :order="order" :key="order.ean" />
+    </div>
+    <p v-else class="cart-banner">
+      You have no itmes in your cart yet. Go to
+      <router-link to="/catalog">CATALOG PAGE</router-link> to add some stuff!
+    </p>
+  </content>
 </template>
 <script>
 import CartItem from "@/components/CartItem.vue";

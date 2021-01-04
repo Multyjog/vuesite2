@@ -35,7 +35,7 @@ h1 {
 .bolder {
     font-weight: bolder;
 }
-.active {
+.router-link-exact-active {
     text-decoration: underline 3px black;
 }
 .active:hover {
@@ -210,4 +210,11 @@ hr {
 .content {
     max-width: 1440px;
     margin: 0 auto;
+}
+.cart-banner {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 200%;
+    text-shadow: 2px 2px black;
+    color: white;
 }
