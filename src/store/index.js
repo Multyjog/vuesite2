@@ -11,12 +11,7 @@ const vuexPersist = new VuexPersist({
 
 export default new Vuex.Store({
   state: {
-    orders: [
-      { id: 0, title: "KAL", price: 220, quantity: 1 },
-      { id: 1, title: "KLAL", price: 100, quantity: 1 },
-      { id: 2, title: "KARAL", price: 300, quantity: 1 },
-      { id: 3, title: "KAPRAL", price: 150, quantity: 1 }
-    ]
+    orders: []
   },
   mutations: {
     addOrder(state, product) {

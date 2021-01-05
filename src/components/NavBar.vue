@@ -23,7 +23,7 @@
       id="navbarSupportedContent"
     >
       <div class="drpdwn justify-content-between">
-        <router-link to="/main"><span class="nav-link">MAIN</span></router-link>
+        <router-link to="/"><span class="nav-link">MAIN</span></router-link>
         <router-link to="/catalog"
           ><span class="nav-link">CATALOG</span></router-link
         >
