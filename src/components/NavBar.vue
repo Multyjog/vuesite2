@@ -2,8 +2,8 @@
   <nav class="navbar navbar-expand-lg navbar-light mt-4">
     <router-link to="/"
       ><a class="navbar-brand d-flex align-items-center">
-        <h1 class="logo p-3">SK</h1>
-        <h2 class="ml-3">SuperKal</h2>
+        <h1 class="logo p-3">SL</h1>
+        <h2 class="ml-3">SuperLorem</h2>
       </a></router-link
     >
     <button
@@ -23,10 +23,16 @@
       id="navbarSupportedContent"
     >
       <div class="drpdwn justify-content-between">
-        <a class="nav-link">MAIN</a>
-        <router-link to="/"><a class="active nav-link">CATALOG</a></router-link>
-        <a class="nav-link">CONTACTS</a>
-        <a class="nav-link">TESTIMONIALS</a>
+        <router-link to="/"><span class="nav-link">MAIN</span></router-link>
+        <router-link to="/catalog"
+          ><span class="nav-link">CATALOG</span></router-link
+        >
+        <router-link to="/contacts"
+          ><span class="nav-link">CONTACTS</span></router-link
+        >
+        <router-link to="/testimonials"
+          ><span class="nav-link">TESTIMONIALS</span></router-link
+        >
       </div>
     </div>
     <div
