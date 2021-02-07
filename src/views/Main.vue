@@ -1,13 +1,13 @@
 <template>
   <div>
     <main class="container d-flex">
-      <h2 class="text-center pt-5 flex-fill banner mr-t5">ENJOY OUR KAL</h2>
+      <h2 class="text-center pt-5 flex-fill banner mr-t5">ENJOY OUR LOREM</h2>
     </main>
     <footer>
       <div class="container-fluid mr-t5">
         <div class="row">
           <div class="col-sm-4 mr-t5">
-            <h2 class="text-center bolder">ECO POOPERS</h2>
+            <h2 class="text-center bolder">ECO LOREM</h2>
             <p class="mr-t5 redshade">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

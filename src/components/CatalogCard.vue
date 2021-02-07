@@ -142,7 +142,6 @@ export default {
       );
     },
     showModal() {
-      console.log("asdasd");
       this.$modal.show(this.product.name);
     }
   }
