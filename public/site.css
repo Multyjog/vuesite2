@@ -212,9 +212,9 @@ hr {
     margin: 0 auto;
 }
 .cart-banner {
+    margin: auto;
     width: 800px;
-    margin: 0 auto;
-    font-size: 200%;
+    font-size: 45px;
     text-shadow: 2px 2px black;
     color: white;
 }
