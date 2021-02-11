@@ -1,0 +1,251 @@
+/* This is from page home */
+body {
+    background-color: #f6d62b;
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: larger;
+}
+.logo {
+    background-color: black;
+    font-weight: bolder;
+    font-size: larger;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: black;
+}
+h1 {
+    color: white;
+}
+.mr-t5 {
+    margin-top: 5%;
+}
+.banner {
+    font-size: 400%;
+    text-shadow: 2px 2px red;
+    color: white;
+}
+.redshade {
+    text-shadow: 1px 1px red;
+    font-size: large;
+}
+.bolder {
+    font-weight: bolder;
+}
+.router-link-exact-active {
+    text-decoration: underline 3px black;
+}
+.active:hover {
+    text-decoration: underline 3px black;
+}
+h2 {
+    font-weight: bold;
+
+}
+footer {
+    width: 80%;
+    margin: auto;
+}
+/* /home */
+
+/* This is from page catalog */
+h3 {
+    border-bottom: 1rem double white;
+    float: left;
+    color: white;
+    font-weight: bolder;
+}
+
+.clear {
+    clear: both;
+}
+
+.active {
+    text-decoration: underline 3px black;
+}
+
+.active:hover {
+    text-decoration: underline 3px black;
+}
+
+p {
+    font-size: small;
+    font-family: montserrat;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+#content {
+    width: 80%;
+
+}
+
+.fl {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+}
+
+.shade {
+    box-shadow: 3px 3px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-warning {
+    background-color: #e48900;
+    font-weight: bolder;
+    color: white;
+    font-size: large;
+}
+
+h4 {
+    font-weight: bolder;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    flex: 0 3 100%;
+}
+
+@media screen and (min-width: 500px) {
+    .cards {
+        flex: 0 1 45%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .cards {
+        flex: 0 1 26%;
+    }
+}
+/* /catalog */
+
+/* This is from page contacts */
+.text {
+    font-weight: bolder;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+/* /contacts */
+
+/* This is from page testimonials */
+.testimonialtext {
+    font-weight: bolder;
+    font-size: large;
+}
+hr {
+    height: 5px;
+    color: white;
+    background-color: white;
+    border-width: 0;
+}
+.testimonial_ava {
+    height: 200px;
+    width: 200px;
+}
+/* /testimonials */
+
+/* This is from page cart */
+.orderinfo {
+    font-weight: bolder;
+    font-size: large;
+}
+.price {
+    font-size: xx-large;
+}
+.card-title {
+    font-size: x-large;
+    padding-top: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+.popup {
+    max-width: 60%;
+    margin: auto;
+}
+.popupheader {
+    padding: 1rem 1rem;
+    display: flex;
+}
+.popupfooter {
+    display: grid;
+    justify-content: end;
+}
+.cursor {
+    cursor: pointer;
+}
+.closemark {
+    position: absolute;
+    right: 20px;
+}
+.drpdwn {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 990px) {
+    .drpdwn {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.marg {
+    margin: 0 3rem 2rem;
+}
+
+#hiddenCard {
+    display: none;
+}
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.cart-banner {
+    margin: auto;
+    width: 800px;
+    font-size: 45px;
+    text-shadow: 2px 2px black;
+    color: white;
+}
+#spinner:not([hidden]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #spinner::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
