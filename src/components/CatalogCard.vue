@@ -53,7 +53,20 @@
       <div class="modal-body">
         <div class="row">
           <div class="col-sm-4">
-            <img class="w-100" :src="product.image" />
+            <carousel
+              :per-page="1"
+              pagination-color="grey"
+              pagination-active-color="black"
+            >
+              <slide v-for="image in product.images" :key="image.title">
+                <img
+                  :src="image.url"
+                  :alt="image.title"
+                  width="100%"
+                  height="100%"
+                />
+              </slide>
+            </carousel>
           </div>
           <div class="col-sm-8">
             <p>
@@ -62,7 +75,7 @@
             <h4>Weight: 100g</h4>
             <h4>
               PRICE:
-              <span class="modal-price">{{ product.net_price }}</span>
+              <span class="modal-price">{{ price }}</span>
             </h4>
           </div>
         </div>

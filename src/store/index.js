@@ -39,8 +39,8 @@ export default new Vuex.Store({
       return parseInt(sum);
     },
     hasProductInCart: state => product => {
-      const eans = state.orders.map(i => i.ean);
-      return eans.includes(product.ean);
+      const ids = state.orders.map(i => i.id);
+      return ids.includes(product.id);
     }
   },
   actions: {},
