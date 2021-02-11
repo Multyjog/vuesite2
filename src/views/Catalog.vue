@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div hidden id="spinner"></div>
+    <div v-if="!products.length" id="spinner"></div>
     <div id="content" class="container-fluid">
       <div class="mr-t5 mb-5">
         <h3>CATALOG</h3>
@@ -28,7 +28,8 @@ export default {
     products: [],
     error: "",
     priceMax: 1000,
-    quantity: 6
+    quantity: 6,
+    isLoaded: false
   }),
   components: {
     CatalogCard
