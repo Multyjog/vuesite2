@@ -1,4 +1,4 @@
-const host = "https://fakeapi.it/";
+const host = "https://fakea.it/";
 
 export function getProducts(quantity, priceMax) {
   const endPoint = "api/v1/products";
